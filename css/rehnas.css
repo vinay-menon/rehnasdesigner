@@ -392,8 +392,9 @@ h2 {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    min-width: 400px;
-    max-width: 400px;
+/*    min-width: 400px;*/
+/*    max-width: 400px;*/
+    max-width: 500px;
     margin: 0 auto 10px;;
     }
 .intro-service-content .header > div {
@@ -421,7 +422,7 @@ h2 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
-    font-size: 2.3rem;
+    font-size: 2.9rem;
     line-height: 1.2;
     margin: auto 0;
     }
