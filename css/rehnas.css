@@ -25,11 +25,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Dancing Script', cursive;
     font-family: 'Leckerli One', cursive;
     font-family: 'Sail', cursive;
-
-
-font-weight: normal;
-
+    font-weight: normal;
     }
+
 h2 {
     margin-bottom: 15px;
     font-size: 2rem;
@@ -62,6 +60,7 @@ h2 {
         0 0 5px black;
 */
     position: relative;
+    margin-bottom: 30px;
     }
 
 .intro-img {
@@ -761,6 +760,9 @@ h2 {
     }
 
 @media (max-width: 1200px) {
+    .intro-services {
+        max-width: 100%;
+        }
     .intro-service-links {
         left: -100px;
         }
@@ -856,6 +858,9 @@ h2 {
     .block-w_half {
         width: 100%;
         }
+    .intro-header {
+        margin-bottom: 0;
+        }
     .intro-header .add-contact {
         width: 100%;
         }
@@ -883,6 +888,26 @@ h2 {
         }
     .open-nav .nav-toggle {
         margin-bottom: 0;
+        }
+    .intro-service-content .header {
+        width: 100%;
+        max-width: 400px;
+        padding: 0 10px;
+        }
+    .intro-service-content .header h2 {
+        font-size: 2.3rem;
+        }
+    .intro-service-content p {
+        padding: 0 10px;
+        }
+    .intro-service-block:nth-child(1):before {
+        background-image: url(../images/intro-service_bridal.jpg);
+        }
+    .intro-service-block:nth-child(2):before {
+        background-image: url(../images/intro-service_boutique.jpg);
+        }
+    .intro-service-block:nth-child(3):before {
+        background-image: url(../images/intro-service_beauty.jpg);
         }
     
     .global-kids-banner {
@@ -930,23 +955,28 @@ h2 {
     }
 
 @media(max-width: 650px) {
+    .section-seperator {
+        background-size: 100% auto;
+        }
+    
     .intro-service-block {
         min-height: auto;
-        padding: 100% 5px 15px;
+        padding: 70% 5px 15px;
         }
     .intro-service-block:before {
         left: 0;
-        background-image: url(images/intro-service_bridal.jpg);
+        background-image: url(../images/intro-service_bridal.jpg);
         background-position: 0 0;
+        background-size: contain;
         }
     .intro-service-block:nth-child(2):before {
-        background-image: url(images/intro-service_boutique.jpg);
+        background-image: url(../images/intro-service_boutique.jpg);
         }
     .intro-service-block:nth-child(3):before {
-        background-image: url(images/intro-service_bridal.jpg);
+        background-image: url(../images/intro-service_beauty.jpg);
         }
     .intro-service-block:nth-child(2):before {
-        right: 0;
+        left: 0; right: 0;
         }
     .intro-service-block:after {
         top: 15px; left: 15px; bottom: 15px; right: 15px;
@@ -969,7 +999,7 @@ h2 {
         margin-left: 0;
         }
     .intro-service-content h2 {
-        margin-bottom: 15px;
+/*        margin-bottom: 15px;*/
         }
     }
 
