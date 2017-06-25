@@ -402,6 +402,16 @@ h2 {
     padding-left: 10px;
     margin-bottom: 0;
     flex-grow: 1;
+    background-image:
+      linear-gradient(
+        45deg,
+        hsl(340,100%,20%),
+        hsl(50,87%,46%),
+        hsl(340,100%,20%)
+        );
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     }
 
 .intro-service-content p {
@@ -912,11 +922,18 @@ h2 {
         padding: 100% 5px 15px;
         }
     .intro-service-block:before {
-        right: 0;
-        background-position: top 50% right 30%;
+        left: 0;
+        background-image: url(images/intro-service_bridal.jpg);
+        background-position: 0 0;
         }
     .intro-service-block:nth-child(2):before {
-        left: 0;
+        background-image: url(images/intro-service_boutique.jpg);
+        }
+    .intro-service-block:nth-child(3):before {
+        background-image: url(images/intro-service_bridal.jpg);
+        }
+    .intro-service-block:nth-child(2):before {
+        right: 0;
         }
     .intro-service-block:after {
         top: 15px; left: 15px; bottom: 15px; right: 15px;
