@@ -335,7 +335,7 @@ h2 {
 .intro-service-block:before {
     content: '';
     position: absolute;
-    top: 0; left: 0; bottom: 0; right: 50%;
+    top: 0; right: 0; bottom: 0; left: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: calc(100% - 20%) bottom;
@@ -351,7 +351,7 @@ h2 {
 .intro-service-block:nth-child(2):before {
     background-image: url(../images/intro-service_boutique-wtf.jpg);
     background-position: 50% 0;
-    right: 0; left: 50%;
+    left: 0; right: 50%;
     }
 .intro-service-block:nth-child(3):before {
     background-image: url(../images/intro-service_beauty-wtf.jpg);
@@ -359,7 +359,7 @@ h2 {
 
 .intro-service-content {
     width: 50%;
-    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -377,11 +377,31 @@ h2 {
         50% 50%;
     }
 .intro-service-block:nth-child(2) .intro-service-content {
-    margin-right: auto;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: 0;
+    }
+.intro-service-content .header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    min-width: 400px;
+    max-width: 400px;
+    margin: 0 auto 10px;;
+    }
+.intro-service-content .header > div {
+    max-width: 120px;
+    }
+.intro-service-content .header > div img {
+    max-width: 100%;
+    width: 100%;
     }
 .intro-service-content h2 {
     color: hsl(50,87%,36%);
+    font-size: 3rem;
+    text-align: left;
+    padding-left: 10px;
+    margin-bottom: 0;
+    flex-grow: 1;
     }
 
 .intro-service-content p {
