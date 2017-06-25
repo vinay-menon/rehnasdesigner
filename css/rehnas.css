@@ -515,6 +515,26 @@ h2 {
     transform: skewY(0);
     }
 
+.gallery-section {
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #222;
+    }
+.gallery-section img {
+    width: 20%;
+    border: 1px solid white;
+    transition: .5s;
+    }
+.gallery-section:hover img {
+    filter: grayscale(1);
+    opacity: .6;
+    }
+.gallery-section img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    }
+
 .content-section {
     background-color: white;
     display: flex;
