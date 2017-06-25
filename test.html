@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <title>Rehnas Designer - Bridal Studio | Boutique | Beauty Salon</title>
+    <style>
+        body {
+            background-image: url(images/service_bg-mob.jpg);
+            background-size: contain;
+/*            background-attachment: fixed;*/
+            background-position: 0 0;
+            height: 2000px;
+            }    
+    </style>
+</head>
+
+<body> 
+<script src="js/jq.js"></script>
+<script>
+    function debugLayout(t,e) {
+        t == "on" ? $(e).css("outline", "1px solid red") : $(e).css("outline", "0");
+    }
+    
+    $("body").on("keydown", function(e){
+        if(e.keyCode == 65) {
+            debugLayout("on","*");
+            }
+        if(e.keyCode == 83) {
+            debugLayout("off","*");
+            }
+    });
+</script>
+
+</body>
+</html>

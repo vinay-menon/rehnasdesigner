@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- ICON -->    
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="css/rehnas.css">
+    
+    <title>Rehnas Designer - Bridal Studio | Boutique | Beauty Salon</title>
+</head>
+
+<body class="secondary-page_contact">
+   
+<section class="main-header">
+        <div class="add-contact">
+            <div class="address">Snehalayam Road, Choondy, Aluva</div>
+            <div class="phone">+91 9447536333, +91 9447032466</div>
+        </div>
+
+        <a href="index.html" class="logo">
+            <img src="images/logo_big.png" alt="rehnas designer logo">
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html">home</a>
+            <div class="drop-dwn">
+                <a href="services.html">services</a>    
+                <div class="intro-service-links">
+                    <a href="#" class="service-link">
+                        <span>Rehnas Bridal Studio</span>
+                    </a>
+
+                    <a href="#" class="service-link">
+                        <span>Rehnas Boutique</span>
+                    </a>
+
+                    <a href="#" class="service-link">
+                        <span>Rehnas Beauty Salon</span>
+                    </a>
+                </div>
+            </div>
+            <a href="about.html">about</a>
+            <a href="gallery.html">gallery</a>
+            <a href="contact.html">contact</a>
+        </nav>
+</section>
+   
+<section class="content-container">
+    <header>
+        <h1>Contact</h1>
+        <div class="header-text">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, deleniti dolorum nihil sint illo. Libero id sequi iusto suscipit animi harum, rerum. Laborum nemo libero quos hic consequuntur possimus eos.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, deleniti dolorum nihil sint illo. Libero id sequi iusto suscipit animi harum, rerum. Laborum nemo libero quos hic consequuntur possimus eos.
+            </p>
+        </div>
+    </header>
+    
+    <div class="content">
+        <section class="content-section bridal">
+           <div class="content-section_text">
+                <h2>Bridal Studio</h2>
+                <ul>
+                    <li>Bridal Makeup</li>
+                    <li>Mehendi</li>
+                    <li>Royal Facials</li>
+                </ul>
+            </div>
+        </section>
+        <section class="content-section boutique">
+           <div class="content-section_text">
+                <h2>Boutique</h2>
+                <ul>
+                    <li>Lacha | Gown | Churidar | Saree | Pardha</li>
+                    <li>Design &amp; Stitching</li>
+                    <li>Computerised Embroidery</li>
+                </ul>
+            </div>
+        </section>
+        <section class="content-section beauty">
+           <div class="content-section_text">
+                <h2>Beauty Salon</h2>
+                <ul>
+                    <li>4K Tech</li>
+                    <li>HD &amp; Air Brush</li>
+                    <li>Spa</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</section>
+    
+<script src="js/jq.js"></script>
+<script>
+    function debugLayout(t,e) {
+        t == "on" ? $(e).css("outline", "1px solid red") : $(e).css("outline", "0");
+    }
+    
+    $("body").on("keydown", function(e){
+        if(e.keyCode == 65) {
+            debugLayout("on","*");
+            }
+        if(e.keyCode == 83) {
+            debugLayout("off","*");
+            }
+    });
+</script>
+
+</body>
+</html>
