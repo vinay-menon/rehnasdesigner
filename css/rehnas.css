@@ -85,7 +85,7 @@ h2 {
     padding: 0 10%;
     margin: 0 auto 60px;
     background-color: hsla(0,0%,0%,.9);
-    background-color: hsla(340,100%,20%,.9);
+    background-color: hsla(340,100%,50%,.9);
     color: white;
     }
 
@@ -468,6 +468,7 @@ h2 {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     background-color: hsla(340,70%,50%,.8);
+    background-color: hsla(285.6, 51%, 19.2%, 0.8);
     }
 .content-container h1 {
     width: 100%;
@@ -551,6 +552,7 @@ h2 {
 
 .secondary-page_services .content {
     background-color: hsla(340,70%,50%,.8);
+    background-color: hsla(285.6, 51%, 19.2%, 0.8);
     }
 
 .content-section_text .image {
