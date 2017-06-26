@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- ICON -->    
     <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
@@ -24,12 +25,14 @@
     
     <link rel="stylesheet" href="css/rehnas.css">
     
+    
     <title>Rehnas Designer - Bridal Studio | Boutique | Beauty Salon</title>
 </head>
 
-<body class="secondary-page_contact">
+<body class="secondary-page_about">
    
 <section class="main-header">
+       
         <div class="add-contact">
             <div class="address">Snehalayam Road, Choondy, Aluva</div>
             <div class="phone">+91 9447536333, +91 9447032466</div>
@@ -40,19 +43,20 @@
         </a>
 
         <nav class="main-nav">
+            <div class="nav-toggle">menu</div>
             <a href="index.html">home</a>
             <div class="drop-dwn">
                 <a href="services.html">services</a>    
                 <div class="intro-service-links">
-                    <a href="#" class="service-link">
+                    <a href="services.html#bridal" class="service-link">
                         <span>Rehnas Bridal Studio</span>
                     </a>
 
-                    <a href="#" class="service-link">
+                    <a href="services.html#boutique" class="service-link">
                         <span>Rehnas Boutique</span>
                     </a>
 
-                    <a href="#" class="service-link">
+                    <a href="services.html#beauty" class="service-link">
                         <span>Rehnas Beauty Salon</span>
                     </a>
                 </div>
@@ -65,52 +69,56 @@
    
 <section class="content-container">
     <header>
-        <h1>Contact</h1>
-        <div class="header-text">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, deleniti dolorum nihil sint illo. Libero id sequi iusto suscipit animi harum, rerum. Laborum nemo libero quos hic consequuntur possimus eos.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, deleniti dolorum nihil sint illo. Libero id sequi iusto suscipit animi harum, rerum. Laborum nemo libero quos hic consequuntur possimus eos.
-            </p>
-        </div>
+        <h1>Contact Us</h1>
     </header>
     
     <div class="content">
-        <section class="content-section bridal">
+        <section class="content-section">
            <div class="content-section_text">
-                <h2>Bridal Studio</h2>
-                <ul>
-                    <li>Bridal Makeup</li>
-                    <li>Mehendi</li>
-                    <li>Royal Facials</li>
-                </ul>
-            </div>
-        </section>
-        <section class="content-section boutique">
-           <div class="content-section_text">
-                <h2>Boutique</h2>
-                <ul>
-                    <li>Lacha | Gown | Churidar | Saree | Pardha</li>
-                    <li>Design &amp; Stitching</li>
-                    <li>Computerised Embroidery</li>
-                </ul>
-            </div>
-        </section>
-        <section class="content-section beauty">
-           <div class="content-section_text">
-                <h2>Beauty Salon</h2>
-                <ul>
-                    <li>4K Tech</li>
-                    <li>HD &amp; Air Brush</li>
-                    <li>Spa</li>
-                </ul>
+               <form action="">
+                   <label for="name">
+                       <span>
+                           name: *
+                       </span>
+                       <input type="text" name=name id=name>
+                   </label>
+                   <label for="email">
+                       <span>
+                           email: *
+                       </span>
+                       <input type="email" name=email id=email>
+                   </label>
+                   <label for="tel">
+                       <span>
+                           phone: *
+                       </span>
+                       <input type="tel" name=tel id=tel>
+                   </label>
+                   <label for="location">
+                       <span>
+                           location:
+                       </span>
+                       <input type="text" name=location id=location>
+                   </label>
+                   <label for="msg">
+                       <span>
+                           message: *
+                       </span>
+                       <textarea name="msg" id="msg"></textarea>
+                   </label>
+                   
+                   <div class="button">                       
+                       <button>
+                           Send
+                       </button>
+                   </div>
+               </form>
             </div>
         </section>
     </div>
 </section>
-    
 <script src="js/jq.js"></script>
+
 <script>
     function debugLayout(t,e) {
         t == "on" ? $(e).css("outline", "1px solid red") : $(e).css("outline", "0");
@@ -123,6 +131,45 @@
         if(e.keyCode == 83) {
             debugLayout("off","*");
             }
+    });
+    
+    $(".nav-toggle").on("click",function(){
+        $(".main-nav").toggleClass("open-nav"); 
+        if ($(this).html() == "close") {
+            $(this).html("menu");
+            } else {
+                $(this).html("close");
+            }
+    });
+    
+    $(function () {
+	
+		var header = $('.main-header');
+        
+		var mark = $('.main-nav');
+	
+        var top = mark.offset().top - parseFloat(mark.css('margin-top').replace(/auto/, 0));
+
+        $(window).on('scroll', function(event) {
+            // what the y position of the scroll is
+            var y = $(this).scrollTop();
+
+            // whether that's below the form
+            if (y >= top) {
+                // if so, ad the fixed class
+                if ( header.is('.fixed-header') ) {
+                    return;
+                    $(".main-header .logo img").attr("src", "images/logo_small.png")
+                }
+                header.addClass('fixed-header');
+                $(".main-header .logo img").attr("src", "images/logo_small.png")
+            } else {
+                // otherwise remove it
+                header.removeClass('fixed-header');
+                $(".main-header .logo img").attr("src", "images/logo_big.png")
+            }
+        });
+
     });
 </script>
 
