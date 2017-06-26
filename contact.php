@@ -1,4 +1,39 @@
-<!DOCTYPE html>
+<?php
+ob_start();
+if(isset($_REQUEST['submit'])) {
+    $name = $_REQUEST['name'];
+    $email = $_REQUEST['email'];
+    $phone = $_REQUEST['tel'];
+    $addr = $_REQUEST['location'];
+    $message = $_REQUEST['msg'];
+    
+    $eol = "\r\n";
+    $dblln = "<br style='margin-bottom: 10px'>";
+
+
+    $descr = "<b>Name:</b> ".$name.$dblln."<b>Email ID:</b> ".$email.$dblln."<b>Message:</b> ".$message;
+     
+    $faddr = $email;
+  
+    $headers1 .= "From: <".$faddr.">".$eol;
+    $headers1 .= "Reply-To: <".$faddr.">".$eol;
+    $headers1 .= "Return-Path: <".$faddr.">".$eol;    // these two to set reply address
+    $headers1 .= "Message-ID: <".time()."-".$faddr.">".$eol;
+    $headers1 .= "X-Mailer: PHP v".phpversion().$eol;
+    $headers1 .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+    //$too=$subj;
+    $too = "vinaymenon313@gmail.com";
+	
+    $sub = "Website Enquiry"." ".$name;
+    $msg = $descr;
+
+    $mail_sent = @mail($too,$sub,$msg,$headers1);
+	
+	
+	header("location:confirm.html");
+    }
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -69,45 +104,56 @@
    
 <section class="content-container">
     <header>
-        <h1>About Us</h1>
+        <h1>Contact Us</h1>
     </header>
     
     <div class="content">
         <section class="content-section">
            <div class="content-section_text">
-                <div class="section">
-                    <div class="about-img">
-                        <img src="images/about_img.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <p>
-                            Situated in Choondy, in the busy district of Aluva, Rehna's Designer is the brain-child of Kalabhavan Navaz and his wife Rehna, who know the importance of looking good. As important as it is in ordinary life, it is more so on the big or the small screen. It is their desire to share this knowledge and the skills they have acquired with you that prompted them to start this venture.
-                        </p>
-                    </div>
-                    <div class="about-img">
-                        <img src="images/about_img02.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <p>
-                            Rehna's is committed to giving you the best quality service and to ensure that you are satisfied. This ensured by using only material that pass their strict quality control. Further, the people who give you these services are experts who are highly qualified in their respective fields. 
-                        </p>
-                        <p>
-                            Try us once and you will find even your worst enemy thinking, "That's awesome!"
-                        </p>
-                    </div>
-                </div>
-                <div class="map">
-                    <p class="map-text">
-                        Directions to our location. See you there!
-                    </p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.1855305896825!2d76.3677213146569!3d10.083879274351508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDA1JzAxLjkiTiA3NsKwMjInMTEuNyJF!5e0!3m2!1sen!2sin!4v1498222714538" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
+               <form action="">
+                   <label for="name">
+                       <span>
+                           name: *
+                       </span>
+                       <input type="text" name=name id=name>
+                   </label>
+                   <label for="email">
+                       <span>
+                           email: *
+                       </span>
+                       <input type="email" name=email id=email>
+                   </label>
+                   <label for="tel">
+                       <span>
+                           phone: *
+                       </span>
+                       <input type="tel" name=tel id=tel>
+                   </label>
+                   <label for="location">
+                       <span>
+                           location:
+                       </span>
+                       <input type="text" name=location id=location>
+                   </label>
+                   <label for="msg">
+                       <span>
+                           message: *
+                       </span>
+                       <textarea name="msg" id="msg"></textarea>
+                   </label>
+                   
+                   <div class="button">                       
+                       <button name="submit">
+                           Send
+                       </button>
+                   </div>
+               </form>
             </div>
         </section>
     </div>
 </section>
-    
 <script src="js/jq.js"></script>
+
 <script>
     function debugLayout(t,e) {
         t == "on" ? $(e).css("outline", "1px solid red") : $(e).css("outline", "0");
