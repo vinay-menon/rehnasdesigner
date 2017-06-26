@@ -562,11 +562,17 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     background-color: #222;
+    margin-bottom: 60px;
     }
-.gallery-section img {
+.gallery-section a {
     width: 20%;
     border: 1px solid white;
     transition: .1s;
+    }
+.gallery-section img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
     }
 .gallery-section:hover img {
     filter: grayscale(1);
